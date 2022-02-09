@@ -1,9 +1,29 @@
 {
   "name": "winz",
   "version": "0.0.1",
-  "author": "MonsieurZ <thibault.feuvrier@hotmail.fr>",
-  "description": "An electron-vue project",
-  "license": null,
+  "description": "Test",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MonsieurZed/WinZ.git"
+  },
+  "author": {
+    "name": "WinZ",
+    "email": "thibault.feuvrier@hotmail.fr",
+    "url": "https://github.com/MonsieurZed/WinZ/"
+  },
+  "contributors": [
+    {
+      "name": "Thibault Feuvrier",
+      "email": "thibault.feuvrier@hotmail.fr",
+      "url": "https://github.com/MonsieurZed"
+    },
+    {
+      "name": "Mickael Rose",
+      "email": "pro.mickael.rose@gmail.com",
+      "url": "https://github.com/Skorchy"
+    }
+  ],
+  "license": "GNU3",
   "main": "./dist/electron/main.js",
   "scripts": {
     "build": "node .electron-vue/build.js && electron-builder",
@@ -45,15 +65,15 @@
     },
     "win": {
       "icon": "build/icons/icon.ico",
-        "target": [
-      {
-        "target": "portable",
-        "arch": [
-          "x64",
-          "ia32"
-        ]
-      }
-    ] 
+      "target": [
+        {
+          "target": "portable",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        }
+      ]
     },
     "linux": {
       "icon": "build/icons"

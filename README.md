@@ -4,7 +4,7 @@ Open source package installer for windows
 
 #### Build Setup
 
-``` bash
+```bash
 # install dependencies
 npm install
 
@@ -15,6 +15,7 @@ npm run dev
 npm run build
 
 ```
+
 ## What is it ?
 
 WinZ aim to make a fresh install of windows easier by providing one for all installer tools. This will be achieve by creating an GUI that allow the user :
@@ -35,3 +36,5 @@ WinZ aim to make a fresh install of windows easier by providing one for all inst
 
 - [MonsieurZed](https://github.com/MonsieurZed)
 - [Skorchy](https://github.com/Skorchy)
+
+- Build with [SimulatedGREG Boilerplate](https://github.com/SimulatedGREG/electron-vue)
