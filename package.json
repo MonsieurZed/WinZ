@@ -30,7 +30,9 @@
     "build:dir": "node .electron-vue/build.js && electron-builder --dir",
     "build:clean": "cross-env BUILD_TARGET=clean node .electron-vue/build.js",
     "build:web": "cross-env BUILD_TARGET=web node .electron-vue/build.js",
+    "build:start": "node .electron-vue/build.js && electron-builder & \".\\build\\winz 0.0.1.exe\"",
     "dev": "node .electron-vue/dev-runner.js",
+    "dev:admin": "gsudo node .electron-vue/dev-runner.js",
     "pack": "npm run pack:main && npm run pack:renderer",
     "pack:main": "cross-env NODE_ENV=production webpack --progress --colors --config .electron-vue/webpack.main.config.js",
     "pack:renderer": "cross-env NODE_ENV=production webpack --progress --colors --config .electron-vue/webpack.renderer.config.js",
@@ -75,13 +77,17 @@
         }
       ]
     },
+    "portable": {
+      "requestExecutionLevel": "admin"
+    },
     "linux": {
       "icon": "build/icons"
     }
   },
   "dependencies": {
     "axios": "^0.18.0",
-    "powershell": "^2.3.2",
+    "electron-log": "^4.4.6",
+    "node-powershell": "^3.3.1",
     "vue": "^2.5.16",
     "vue-electron": "^1.0.6",
     "vue-router": "^3.0.1",
@@ -117,6 +123,7 @@
     "sass-loader": "^7.0.3",
     "style-loader": "^0.21.0",
     "url-loader": "^1.0.1",
+    "vue-devtools": "^5.1.4",
     "vue-html-loader": "^1.2.4",
     "vue-loader": "^15.2.4",
     "vue-style-loader": "^4.1.0",
